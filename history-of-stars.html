@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星星的历史 - 星空探索</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        video {
+            max-width: 80%;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .dropdown {
+            margin: 20px 0;
+        }
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 5px #fff;
+        }
+        option {
+            background-color: #444;
+            color: #fff;
+        }
+        p {
+            font-size: 1em;
+            max-width: 800px;
+            line-height: 1.6;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            padding: 0 20px;
+        }
+        .back-link {
+            margin-top: 30px;
+            color: #fff;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <script>
+        function goToPage() {
+            var selection = document.getElementById("planet-select").value;
+            if (selection) {
+                window.location.href = selection;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>星星的历史</h1>
+
+<!-- 视频插入 -->
+<video controls>
+    <source src="history-of-stars.mp4" type="video/mp4">
+    您的浏览器不支持视频播放。
+</video>
+
+<p>
+    星星的历史，如同宇宙中的长河，流淌着无尽的光辉与秘密。
+    每一颗星辰的诞生、燃烧与消亡，都是时光留下的印记。
+    让我们一起探索这片浩瀚星空，聆听那些来自遥远时空的低语。
+</p>
+
+<!-- 下拉栏 -->
+<div class="dropdown">
+    <label for="planet-select">选择星球或 AI 助手:</label>
+    <select id="planet-select" onchange="goToPage()">
+        <option value="">--请选择--</option>
+        <option value="mercury.html">水星</option>
+        <option value="venus.html">金星</option>
+        <option value="earth.html">地球</option>
+        <option value="mars.html">火星</option>
+        <option value="jupiter.html">木星</option>
+        <option value="saturn.html">土星</option>
+        <option value="uranus.html">天王星</option>
+        <option value="neptune.html">海王星</option>
+        <option value="https://chat.openai.com/">AI 助手（Confirm that your region is overseas）</option> <!-- 加入AI助手链接 -->
+    </select>
+</div>
+
+<a href="view-stars.html" class="back-link">返回星球选择</a>
+
+</body>
+</html>
